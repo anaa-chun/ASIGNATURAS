@@ -1,0 +1,78 @@
+1.EJERCICIOS DE EJERCICIOS DE CREACIÓN Y ACTUALIZACIÓN DE REPOSITORIOS
+
+EJERCICIO 1:
+Configurar Git definiendo el nombre del usuario, el correo electrónico y activar el coloreado de la salida. Mostrar la configuración final.
+
+git config --global user.name "nombre del usuario" 
+git config --global user.email "correo electronico" 
+git config --global color.ui auto
+
+git config --list 
+
+
+EJERCICIO 2:
+//Crear un repositorio nuevo con el nombre libro y mostrar su contenido.
+mkdir libro
+cd libro // entra en la carpeta "libro"
+ls-la
+
+
+EJERCICIO 3:
+1. Comprobar el estado del repositorio.
+git status
+
+2. Crear un fichero indice.txt con el siguiente contenido:
+Capítulo 1: Introducción a Git
+Capítulo 2: Flujo de trabajo básico
+Capítulo 3: Repositorios remotos
+
+echo "Capítulo 1: Introducción a Git" > indice.txt
+echo "Capítulo 2: Flujo de trabajo básico" >> indice.txt // este signo ">>" hace el salto de linea pero en mismo txt
+echo "Capítulo 3: Repositorios remotos" >> indice.txt
+
+3. Comprobar de nuevo el estado del repositorio.
+git status
+
+4. Añadir el fichero a la zona de intercambio temporal.
+git add indice.txt
+
+5. Volver a comprobar una vez más el estado del repositorio.
+git status
+
+
+EJERCICIO 4:
+Realizar un commit de los últimos cambios con el mensaje “Añadido índice del libro.” y ver el estado del repositorio.
+git commit -m "Añadido índice del libro"
+git status
+
+
+EJERCICIO 5:
+1. Cambiar el fichero indice.txt para que contenga lo siguiente:
+Capítulo 1: Introducción a Git 
+Capítulo 2: Flujo de trabajo básico
+Capítulo 3: Gestión de ramas
+Capítulo 4: Repositorios remotos
+
+echo "Capítulo 1: Introducción a Git" > indice.txt
+echo "Capítulo 2: Flujo de trabajo básico" >> indice.txt
+echo "Capítulo 3: Gestión de ramas >> indice.txt
+echo "Capítulo 4: Repositorios remotos" >> indice.txt
+
+
+2. Mostrar los cambios con respecto a la última versión guardada en el repositorio.
+git diff
+
+3. Hacer un commit de los cambios con el mensaje “Añadido capítulo 3 sobre gestión de ramas.”
+git commit -m “Añadido capítulo 3 sobre gestión de ramas.”
+
+
+EJERCICIO 6:
+1. Mostrar los cambios de la última versión del repositorio con respecto a la anterior.
+git show
+
+2. Cambiar el mensaje del último commit por “Añadido capítulo 3 sobre gestión de ramas al índice.”
+git commit --amed -m "Añadido capitulo 3 sobre gestión de ramas al índice."
+
+3. Volver a mostrar los últimos cambios del repositorio.
+git show
+
