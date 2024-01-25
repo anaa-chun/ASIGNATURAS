@@ -1,6 +1,6 @@
 MODULE 1 INTRODUCTION
 1) To try it out, type "ls" (without the quotation marks) next to the "zoo>" prompt in the terminal and then hit Enter.
-ls
+```ls```
 
 2) Escriba el comando que enumera el contenido de su directorio actual, luego presione la tecla Enter. Recuerde escribir el comando en minúsculas.
 ls
