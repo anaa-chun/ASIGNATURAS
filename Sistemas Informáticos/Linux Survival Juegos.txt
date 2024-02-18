@@ -1,0 +1,197 @@
+MODULE 1 INTRODUCTION
+1) To try it out, type "ls" (without the quotation marks) next to the "zoo>" prompt in the terminal and then hit Enter.
+ls
+
+2) Escriba el comando que enumera el contenido de su directorio actual, luego presione la tecla Enter. Recuerde escribir el comando en minúsculas.
+ls
+
+3) Ahora escriba el comando para crear el directorio 'primates'.
+mkdir primates
+
+4) Comencemos moviendo 'chimpancés' al directorio 'primates'. Escriba el comando para mover el archivo 'chimpancés' al directorio 'primates'.
+mv chimps primates
+
+5) En el mensaje 'zoo', escriba el comando para cambiar al directorio 'primates'.
+cd primates
+
+6) Escríbalo en el símbolo del sistema para verificar su ubicación actual. Luego, en el segundo mensaje, escriba el comando que enumera el contenido del directorio actual, para que podamos estar seguros de que todo se movió a este directorio correctamente.
+pwd
+
+7) Escriba el comando para cambiar al directorio 'animales', luego escriba el comando que imprime su directorio de trabajo para asegurarse de que terminó en el lugar correcto.
+cd ..
+
+8) - Crear directorio 'reptiles'.
+  - Mueva el archivo 'cobras' al directorio 'reptiles'.
+Escriba los comandos para ejecutar las dos acciones enumeradas anteriormente; luego haremos una prueba sobre los comandos que has aprendido hasta ahora.
+mkdir reptiles
+move cobras reptiles
+
+
+QUIZ NUMBER 1
+¿Qué comando se utiliza para:
+1) ¿Cambiar a otro directorio?: cd
+2) ¿Mover archivos y directorios?: mv
+3) ¿Cambiar el nombre de archivos y directorios?: mv
+4) ¿Enumerar el contenido de un directorio?: ls
+5) ¿Imprimir su directorio de trabajo actual?: pwd
+6) ¿Crear un nuevo directorio?: mkdir
+7) ¿Mostrar el contenido de un archivo?: more
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+MODULE 2 INTRODUCTION
+1) Primero crea el directorio 'snakes'.
+mkdir snakes
+
+2) No estamos en el directorio 'reptiles', por lo que tendrás que usar una ruta relativa en tu comando de copia.
+Escriba el comando para copiar 'cobras' del directorio 'reptiles' al directorio 'snakes'
+cp reptiles/cobras snakes
+
+3) Escriba el comando para eliminar el archivo 'cobras' del directorio 'reptiles'.
+rm reptiles/cobras
+
+4) Escriba el comando para eliminar el directorio 'reptiles'.
+rmdir reptiles
+
+5) Ahora sólo nos queda una tarea y es crear un directorio llamado 'pachyderms' y mover 'elefantes' a él. Escribe los comandos necesarios y habrás
+terminado de organizar todos los archivos de animales.
+mkdir pachyderms
+mv elephants pachyderms
+
+6) Bien, es hora de volver a la acción. Escriba el comando para otorgar permiso de 'write' al 'group' prim para el archivo 'chimps'.
+Luego escriba el comando para obtener una lista larga de los archivos para que pueda verificar su trabajo.
+chmod g+w chimps
+ls -l
+
+7) Escriba el comando para otorgar permiso de 'write' al 'group' prim en 'all files' en el directorio actual.
+Luego escriba el comando para obtener una lista larga de los archivos.
+chmod g+w *
+ls -l
+
+8) Ya que estamos en el tema de los grupos, deberíamos ver en qué grupos estás. Para obtener una lista de las membresías de tu grupo, escribe "groups"
+Pruébelo en el símbolo del sistema.
+groups
+
+
+
+QUIZ NUMBER 2
+
+¿Qué comando se utiliza para:
+1) ¿Copiar archivos?: cp
+2) ¿Eliminar archivos?: rm
+3) ¿Enumera los grupos en los que estás?: groups
+4) ¿Eliminar directorios vacíos?: rmdir
+5) ¿Cambiar los permisos de los archivos?: chmod
+
+1) ¿Qué comodín representa todos los archivos?: *
+2) ¿Qué letra representa a todos los demás usuarios?: o
+3) ¿Qué letra representa el permiso de ejecución?: x
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+MODULE 3 INTRODUCTION
+1) Como desea encontrar el comando que le indicará el ID de usuario de Greg, probablemente debería hacer una búsqueda manual de la palabra 'usuario'.
+Escriba el comando apropiado cuando se le solicite.
+man -k user
+
+2) Ahora deberías saber el nombre del comando utilizado para averiguar el ID de usuario de una persona, pero no conoces su sintaxis. 
+Escriba el comando 'man' apropiado cuando se le solicite.
+man finger
+
+3) Escriba el comando que le mostrará el ID de usuario de Greg.
+finger greg
+
+4) Recuerde que la razón original por la que queríamos averiguar el ID de usuario de Greg era para poder buscar en su directorio personal.
+Escriba el comando para cambiar su ubicación al directorio de inicio de Greg.
+cd ~jester
+
+5) Ahora es el momento de probar suerte con 'find'. Por cierto, estás bastante seguro de que los archivos de chistes de Greg comienzan con las letras 'joke'.
+find . -name "joke*"
+
+6) Primero, vaya al directorio donde se almacenan los archivos de bromas de Jester.
+En segundo lugar, imprima el contenido de 'joke-1' y 'joke-2' en su pantalla, usando 'cat'.
+cd kids
+cat joke-1 joke-2
+
+7) En el símbolo del sistema, escriba el comando que concatenará los archivos 'joke-1' y 'joke-2' y enviará el resultado a un archivo en su directorio personal 
+llamado 'cursi'. Sabemos que aún no tenemos un archivo llamado 'cursi', así que no use el operador de agregar.
+cat joke-1 joke-2 > ~/corny
+cd ~
+
+8) Escriba el comando para enviar el archivo 'cursi' a la impresora 'zephyr'
+lpr -P zephyr corny
+
+9) Escriba el comando para mostrar el estado de todos los trabajos en la cola 'zephyr'.
+lpq -P zephyr
+
+10) Escriba el comando para cancelar su trabajo de impresión.
+lprm -P zephyr 737
+lpr -P typhoon corny
+
+
+
+QUIZ NUMBER 3
+Qué comando se utiliza para:
+1) ¿Concatenar archivos?: cat
+2) ¿Ver páginas del manual?: man
+3) ¿Mostrar el estado de la cola de impresión?: lpq
+4) ¿Localizar archivos?: find
+5) ¿Eliminar trabajos de impresión?: lprm
+6) ¿Mostrar información del usuario?: finger
+
+1) ¿Qué símbolo significa directorio de inicio?: ~
+2) ¿Qué símbolo envía la salida a un nuevo archivo?: >
+3) ¿Qué símbolo significa directorio actual?: .
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+MODULE 4 INTRODUCTION
+1) Escriba el comando que copiará el directorio 'pools' de Belinda a su directorio de inicio.
+cp -r ~bookie/pools ~
+
+2) Escriba el comando que proporciona una lista de uso del disco.
+df
+
+3) Escriba el comando para averiguar cuánto espacio libre hay en el disco donde reside su directorio actual.
+df . 
+
+4) Escriba el comando para eliminar su directorio 'grupos' incompleto.
+rm -r pools
+
+5) Escriba el comando para enumerar todos los procesos.
+ps aux
+
+6) Recuerde que nuestro objetivo es acabar con un proceso desbocado llamado 'rogue'. Escriba la secuencia de comandos que
+enumerará sólo aquellos procesos que contengan la palabra 'rogue'.
+ps aux | grep rogue
+
+7) Escriba el comando para finalizar el proceso 'deshonesto'.
+kill 796
+
+8) Ejecute el comando para ver si el proceso 'deshonesto' todavía se está ejecutando.
+ps aux | grep rogue
+
+9) Escribe el comando para matar al 'rogue' inmediatamente.
+kill -9 796
+
+10) Escriba el comando para ver si el proceso 'deshonesto' todavía se está ejecutando.
+ps aux | grep rogue
+
+
+
+QUIZ NUMBER 4
+Cuál
+1) ¿El comando muestra espacio libre en disco?: df
+2) ¿El comando muestra el estado del proceso?: ps
+3) ¿La opción del comando anterior muestra todos los procesos del sistema?: aux
+4) ¿El comando le dice a un proceso que muera con gracia?: kill
+5) ¿La opción del comando anterior le dice a un proceso que muera inmediatamente?: -9
+6) ¿El comando busca palabras en el texto?: grep
+7) ¿El símbolo envía la salida a otro programa?: |
+8) ¿La opción 'cp' y 'rm' actúa sobre los árboles?: -r
